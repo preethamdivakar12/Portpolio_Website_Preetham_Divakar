@@ -70,18 +70,16 @@ body {
     padding: 20px;
 
 }
-.back-img{
+.back-img {
     flex: 1;
     display: flex;
     justify-content: flex-end;
     padding-right: 20px;
-    padding-top: 40px;      
-    padding-bottom: 30px;    
+    padding-top: 40px;
+    padding-bottom: 30px;
     width: 470px;
     height: 470px;
     position: relative;
-    
-   
 }
 
 .back-img img {
@@ -89,8 +87,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 1px 1px 20px #2f0299f7,
-                 1px 1px 40px #0053b8f7;
-    
+                1px 1px 40px #0053b8f7;
 }
 .home-content h3 {
     font-size: 32px;
@@ -234,56 +231,177 @@ body {
     margin-bottom: 4rem;
     margin-right: 2.5rem;
 }
-#services{
+
+@media screen and (max-width: 768px) {
+   
+    .header {
+        padding: 20px 5%;
+    }
+
+    
+    .navbar a {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+   
+    .home {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 70px 5%;
+    }
+
+    .home-content {
+        max-width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .back-img {
+        flex: 1;
+        width: 80%; 
+        height: 300px; 
+        justify-content: center;
+        align-items: center;
+        padding-right: 0; 
+        margin-top: 20px; 
+    }
+
+    .back-img img {
+        width: 100%; 
+        height: 100%; 
+        border-radius: 50%; 
+    }
+
+   
+    .about {
+        display: block;
+        padding: 10px;
+    }
+
+    .about-img {
+        margin-left: 0;
+        padding-right: 0;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        height: 250px;
+    }
+
+    .about-img img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+    }
+
+    .about-text {
+        margin: 0;
+        text-align: center;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about-text h4 {
+        font-size: 24px;
+    }
+
+    .about-text p {
+        font-size: 18px;
+        margin: 20px;
+    }
+    
+}
+
+@media screen and (max-width: 480px) {
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .home-content h3 {
+        font-size: 28px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .home-sci a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        margin: 10px 10px;
+    }
+
+    .btn-box {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+    .back-img {
+        width: 90%;
+        height: 250px; 
+    }
+
+    .back-img img {
+        width: 100%; 
+        height: 100%; 
+    }
+}
+/*  */
+#services {
     color: aliceblue;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 4rem;
 }
-.sub-title{
+
+.sub-title {
     text-align: center;
     font-size: 40px;
     padding-bottom: 50px;
     padding-top: 70px;
 }
-.sub-title span{
+
+.sub-title span {
     color: #0ef;
 }
-.container{
+
+.container {
     padding: 20px;
 }
 
-.services-list{
+.services-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(259px,1fr));
-    grid-gap:40px;
+    grid-template-columns: repeat(auto-fit, minmax(259px, 1fr));
+    grid-gap: 40px;
     margin-top: 50px;
-    
 }
-.services-list div{
+
+.services-list div {
     background-color: transparent;
     font-size: 13px;
     padding: 40px;
-    font-weight: 13px ;
+    font-weight: 13px;
     border-right: 10px;
     border-radius: 20px;
-    transition: background 0.5s,transform 0.5s;
-    box-shadow: 1px 1px 20px #012290f7,
-                 1px 1px 40px #0053b8f7;
-
+    transition: background 0.5s, transform 0.5s;
+    box-shadow: 1px 1px 20px #012290f7, 1px 1px 40px #0053b8f7;
 }
-.services-list div i{
+
+.services-list div i {
     font-size: 50px;
     margin-bottom: 30px;
-    
 }
-.services-list div h2{
+
+.services-list div h2 {
     font-size: 30px;
     font-weight: 500;
     margin-bottom: 15px;
-
 }
-.services-list div a{
+
+.services-list div a {
     text-decoration: none;
     color: #000000;
     font-size: 12px;
@@ -292,86 +410,139 @@ body {
 }
 
 .read {
-     display: inline-block;
-     padding: 12px 28px;
-     background: #0ef;
-     border-radius: 40px;
-     font-size: 16px;
-     color: #081b29;
-     letter-spacing: 1px;
-     text-decoration: none;
-     font-weight: 600;
-     opacity: 0;
-     animation: slideTop 1s ease forwards;
+    display: inline-block;
+    padding: 12px 28px;
+    background: #0ef;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #081b29;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    opacity: 0;
+    animation: slideTop 1s ease forwards;
     animation-delay: .5s;
     box-shadow: 0 0 5px #0ef,
-        0 0 20px #0ef;
-    }
-.read:hover{
-    box-shadow: 0 0 5px cyan,
-        0 0 25px cyan, 0 0 50px cyan,
-        0 0 100px cyan, 0 0 200px cyan; 
+                0 0 20px #0ef;
 }
-.services-list div:hover{
+
+.read:hover {
+    box-shadow: 0 0 5px cyan,
+                0 0 25px cyan, 0 0 50px cyan,
+                0 0 100px cyan, 0 0 200px cyan;
+}
+
+.services-list div:hover {
     transform: translateY(-10px);
 }
-section{
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .sub-title {
+        font-size: 32px;
+    }
+
+    .services-list {
+        grid-template-columns: 1fr;
+        grid-gap: 20px; 
+    }
+
+    .services-list div {
+        padding: 20px; 
+    }
+
+    .services-list div i {
+        font-size: 40px; 
+    }
+
+    .services-list div h2 {
+        font-size: 24px; 
+    }
+
+    .services-list div a {
+        font-size: 14px; 
+    }
+
+    .read {
+        padding: 10px 24px; /* Adjust button size */
+        font-size: 14px; /* Adjust font size for buttons */
+    }
+}
+
+/* Large screen adjustments: Ensures all fields are in one row */
+@media screen and (min-width: 1200px) {
+    .sub-title {
+        font-size: 50px; /* Larger font size on large screens */
+    }
+
+    .services-list {
+        grid-template-columns: repeat(3, 1fr); /* Ensures three items per row */
+        grid-gap: 40px; /* Standard gap between items */
+    }
+
+    .services-list div {
+        padding: 50px; /* More padding on larger screens */
+    }
+
+    .services-list div i {
+        font-size: 60px; /* Larger icon size on large screens */
+    }
+
+    .services-list div h2 {
+        font-size: 36px; /* Larger heading size on large screens */
+    }
+}
+
+/*  */
+section {
     display: flex;
     flex-wrap: wrap;
-
+    justify-content: center;
 }
-.container1{
-    width: 600px;
-    height: 500px;
-    padding: 40px 50px;
-    margin-left: 50px;
 
+.container1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
-.heading1{
-    text-align: left;
+
+.skills-left, .skills-right {
+    width: calc(50% - 10px);
+}
+
+.skills-left .heading1, .skills-right .heading2 {
+    text-align: center;
+    margin-top: 40px; /* Added top margin for spacing between headings */
     text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness:5px;
-    margin-bottom: 50px;
-    margin-left: 50px;
+    text-underline-offset: 6px;
+    margin-bottom: 20px;    
+}
 
+.Technical-bars .bar {
+    margin-top: 20px;
 }
-.bar{
-    font-size: 23px;
-}
-.Technical-bars .bar{
-    margin-top: 40px 0;
-    margin-bottom: 15px;
-}
-.Technical-bars .bar:first-child{
-    margin-top: 0;
 
-}
-.Technical-bars .bar:last-child{
-    margin-bottom: 0;
-}
-.Technical-bars .bar .info{
+.Technical-bars .bar .info {
     margin-bottom: 5px;
 }
-.Technical-bars .bar .info span{
-    font-size: 17px;
-    font-weight: 500;
-    animation: showText 0.5s 1s linear forwards;
-    opacity: 0;
-}
-.Technical-bars .bar .progress-line{
+
+.Technical-bars .bar .progress-line {
     position: relative;
     border-radius: 10px;
-    width: 75%;
+    width: 100%;
     height: 5px;
     background-color: #000000;
     animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
     transition: scaleX(0);
     transform-origin: left;
-
 }
 
-.Technical-bars .bar .progress-line span{
+.Technical-bars .bar .progress-line span {
     height: 100%;
     background-color: #0ef;
     position: absolute;
@@ -379,23 +550,29 @@ section{
     animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
     transform: scaleX(0);
     transform-origin: left;
+}
 
+.progress-line.html span {
+    width: 95%;
 }
-.progress-line.html span{
-     width: 90%;
+
+.progress-line.css span {
+    width: 90%;
 }
-.progress-line.css span{
+
+.progress-line.javascript span {
     width: 75%;
 }
-.progress-line.javascript span{
-    width: 60%;
-}
-.progress-line.python span{
+
+.progress-line.python span {
     width: 80%;
 }
-.progress-line.c span{
-    width: 70%;
+
+.progress-line.c span {
+    width: 85%;
 }
+
+
 
 .progress-line span::after{
     position: absolute;
@@ -411,68 +588,55 @@ section{
 }
 
 .progress-line.html span::after{
-    content: "90%";
+    content: "95%";
 }
 .progress-line.css span::after{
-    content: "75%";
+    content: "90%";
 }
 .progress-line.javascript span::after{
-    content: "60%";
+    content: "75%";
 }
 .progress-line.python span::after{
     content: "80%";
 }
 .progress-line.c span::after{
-    content: "70%";
+    content: "85%";
 }
 
-.heading2{
-    text-align: left;
-    text-decoration: underline;
-    text-underline-offset: 10px;
-    text-decoration-thickness:5px;
-    margin-bottom: 50px;    
-    
-   
-}
 
-.container2 {
-    width: 100%;
-    max-width: 600px;
-    padding: 40px 20px;
-}
 
-.container2 .heading2 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.container2 .frameworks-container {
+.frameworks-container {
     display: flex;
-    justify-content: space-between;
-    gap: 20px; /* Adjust the gap between blocks */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
 }
 
-.container2 .frameworks {
+.frameworks {
     background-color: transparent;
     font-size: 16px;
-    padding: 35px;
+    padding: 20px;
     text-align: center;
     font-weight: 500;
-    border-radius: 20px;
+    border-radius: 10px;
     box-shadow: 1px 1px 10px #012290f7, 1px 1px 40px #0053b8f7;
-    flex: 1; /* Make each block the same width */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 100%;
+    max-width: 200px; /* Ensure all boxes have the same width */
 }
 
-.container2 .frameworks i {
-    font-size: 50px;
+.frameworks i {
+    font-size: 40px;
     margin-bottom: 10px;
-    margin-top: 20px;
     color: #0ef;
 }
+
+@media screen and (max-width: 768px) {
+    .skills-left, .skills-right {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
 .main-text{
     padding-top:70px;
     margin-top: 60px;
@@ -566,7 +730,6 @@ section{
     padding-left: 30px;
     padding-top: 140px;
     padding-bottom: 40px;
-
 }
 .Contact-text h2{
     font-size: 75px;
@@ -676,6 +839,139 @@ section{
         0 0 25px cyan, 0 0 50px cyan,
         0 0 100px cyan, 0 0 200px cyan; 
 }
+
+/* For tablets and smaller devices */
+@media screen and (max-width: 1024px) {
+    .Contact{
+        grid-template-columns: 1fr;  /* Stack items vertically */
+        padding-left: 20px;
+        padding-top: 100px;
+    }
+    
+    .Contact-text h2{
+        font-size: 60px;  /* Smaller font size */
+    }
+
+    .Contact-text h4{
+        font-size: 18px;
+    }
+
+    .Contact-text p{
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .Contact-list li{
+        font-size: 16px;  /* Adjust font size */
+    }
+
+    .Contact-icons i{
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        margin: 20px 10px;
+    }
+
+    .Contact-form form input,
+    .Contact-form form textarea{
+        width: 100%;  /* Full width of form elements */
+    }
+}
+
+/* For smaller mobile devices */
+@media screen and (max-width: 768px) {
+    .Contact{
+        padding-left: 15px;
+        padding-top: 80px;
+    }
+
+    .Contact-text h2{
+        font-size: 50px;
+    }
+
+    .Contact-text h4{
+        font-size: 16px;
+    }
+
+    .Contact-text p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .Contact-list li{
+        font-size: 14px;
+    }
+
+    .Contact-icons i{
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+        margin: 15px 8px;
+    }
+
+    .Contact-form form input,
+    .Contact-form form textarea{
+        padding: 12px;
+    }
+
+    .Contact-form textarea{
+        height: 180px;
+    }
+
+    .Contact-form form .send{
+        padding: 12px 50px;
+        font-size: 16px;
+    }
+}
+
+/* For very small devices (like phones in portrait mode) */
+@media screen and (max-width: 480px) {
+    .Contact{
+        padding-left: 10px;
+        padding-top: 60px;
+    }
+
+    .Contact-text h2{
+        font-size: 40px;
+    }
+
+    .Contact-text h4{
+        font-size: 14px;
+    }
+
+    .Contact-text p{
+        font-size: 14px;
+        line-height: 22px;
+    }
+
+    .Contact-list li{
+        font-size: 12px;
+    }
+
+    .Contact-icons i{
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+        margin: 10px 5px;
+    }
+
+    .Contact-form form input,
+    .Contact-form form textarea{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .Contact-form textarea{
+        height: 150px;
+    }
+
+    .Contact-form form .send{
+        padding: 10px 40px;
+        font-size: 14px;
+    }
+}
+
+/*  */
 .last-text{
     width: 100%;
     text-align: center;
@@ -777,3 +1073,4 @@ section{
         opacity: 1;
     }
 }
+

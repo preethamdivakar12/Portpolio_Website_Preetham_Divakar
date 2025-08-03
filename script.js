@@ -4,48 +4,56 @@ var typed = new Typed(".text", {
     backSpeed: 100,
     backDelay: 1000,
     loop: true
-  });
-  
-  document.getElementById('contactForm').addEventListener('submit', async function(event) {
-    event.preventDefault(); // Prevent the default form submission
-  
+});
+
+document.getElementById('contactForm').addEventListener('submit', async function(event) {
+    event.preventDefault();
+
     const form = event.target;
     const formData = new FormData(form);
-  
-    // Convert form data to JSON
+
     const data = {};
     formData.forEach((value, key) => {
-      data[key] = value;
+        data[key] = value;
     });
-  
+
+    const submitButton = form.querySelector('.send');
+    submitButton.value = 'Sending...';
+    submitButton.disabled = true;
+
     try {
-      const response = await fetch('http://localhost:3000/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      });
-  
-      if (response.ok) {
-        showNotification('Message sent!');
-        form.reset(); // Reset the form fields
-      } else {
-        showNotification('Server error. Please try again later.');
-      }
+        // Use the regular /contact endpoint from server.js
+        const response = await fetch('/contact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+            showNotification('Message sent successfully! ✅');
+            form.reset();
+        } else {
+            showNotification(result.error || 'Error sending message. Please try again.');
+        }
     } catch (error) {
-      console.error('Error:', error);
-      showNotification('Network error. Please check your connection.');
+        console.error('Error:', error);
+        showNotification('Network error. Please check your connection.');
+    } finally {
+        submitButton.value = 'submit';
+        submitButton.disabled = false;
     }
-  });
-  
-  function showNotification(message) {
+});
+
+function showNotification(message) {
     const notification = document.getElementById('notification');
     notification.textContent = message;
     notification.classList.add('show');
-  
+
     setTimeout(() => {
-      notification.classList.remove('show');
-    }, 3000); // Hide notification after 3 seconds
-  }
-  
+        notification.classList.remove('show');
+    }, 4000);
+}
